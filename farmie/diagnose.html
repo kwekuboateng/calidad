@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <!-- Title -->
+  <title>Calidad - Rapid, Accurate Diagnosing | Diagnose</title>
+  <!-- Favicon -->
+  <link rel="icon" href="img/core-img/favicon.ico">
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <style >
+    .box {
+	border-color: #e6e6e6;
+	background: #FFF;
+	border-radius: 6px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+	padding: 10px;
+	margin-bottom: 40px;
+}
+
+.box-center {
+	margin: 20px auto;
+}
+
+/* input [type = file]
+----------------------------------------------- */
+
+input[type=file] {
+	display: block !important;
+	right: 1px;
+	top: 1px;
+	height: 34px;
+	opacity: 0;
+  width: 100%;
+	background: none;
+	position: absolute;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.control-fileupload {
+	display: block;
+	border: 1px solid #d6d7d6;
+	background: #FFF;
+	border-radius: 4px;
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	padding: 0px 10px 2px 10px;
+  overflow: hidden;
+  position: relative;
+}
+  .control-fileupload:before, input, label {
+    cursor: pointer !important;
+  }
+  /* File upload button */
+  .control-fileupload:before {
+    /* inherit from boostrap btn styles */
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #cccccc;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-bottom-color: #b3b3b3;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: color 0.2s ease;
+
+    /* add more custom styles*/
+    content: 'Browse';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    right: 2px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  
+  label {
+    line-height: 24px;
+    color: #999999;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+    z-index: 1;
+    margin-right: 90px;
+    margin-bottom: 0px;
+    cursor: text;
+  }
+
+  </style>
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader d-flex align-items-center justify-content-center">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- ##### Header Area Start ##### -->
+  <header class="header-area">
+      <!-- Top Header Area -->
+      <div class="top-header-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="top-header-content d-flex align-items-center justify-content-between">
+                <!-- Top Header Content -->
+                <div class="top-header-meta">
+                  <p>Welcome to <span>Farmie</span>, we hope you will enjoy our products and have good experience</p>
+                </div>
+                <!-- Top Header Content -->
+                <div class="top-header-meta text-right">
+                  <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: infodeercreative@gmail.com</span></a>
+                  <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122"><i class="fa fa-phone" aria-hidden="true"></i> <span>Call Us: +84 223 9000</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Navbar Area -->
+      <div class="famie-main-menu">
+        <div class="classy-nav-container breakpoint-off">
+          <div class="container">
+            <!-- Menu -->
+            <nav class="classy-navbar justify-content-between" id="famieNav">
+              <!-- Nav Brand -->
+              <a href="index.html" class="nav-brand">CALIDAD</a>
+              <!-- Navbar Toggler -->
+              <div class="classy-navbar-toggler">
+                <span class="navbarToggler"><span></span><span></span><span></span></span>
+              </div>
+              <!-- Menu -->
+              <div class="classy-menu">
+                <!-- Close Button -->
+                <div class="classycloseIcon">
+                  <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                </div>
+                <!-- Navbar Start -->
+                <div class="classynav">
+                  <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="diagnose.html">Diagnose</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                  <!-- Search Icon -->
+                  <div id="searchIcon">
+                    <i class="icon_search" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <!-- Navbar End -->
+              </div>
+            </nav>
+  
+            <!-- Search Form -->
+            <div class="search-form">
+              <form action="#" method="get">
+                <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
+                <button type="submit" class="d-none"></button>
+              </form>
+              <!-- Close Icon -->
+              <div class="closeIcon"><i class="fa fa-times" aria-hidden="true"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  <!-- ##### Header Area End ##### -->
+
+  <!-- ##### Breadcrumb Area Start ##### -->
+  <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url('img/bg-img/18.jpg');">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <div class="breadcrumb-text">
+            <h2>ACCURATE, RAPID DIAGNOSING</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ##### Breadcrumb Area End ##### -->
+
+ 
+
+  <!-- ##### Newsletter Area Start ##### -->
+  
+
+  <!-- ##### Contact Area Start ##### -->
+  <section class="contact-area section-padding-100-0">
+    <div class="container">
+      <div class="row justify-content-between">
+
+        <!-- Contact Content -->
+        <div class="col-12 col-lg-12">
+          <div class="contact-content mb-100">
+            <!-- Section Heading -->
+            <div class="section-heading">
+              <p>Diagnose</p>
+              <h2><span>Upload image to</span> diagnose your poultry bird</h2>
+              <img src="img/core-img/decor.png" alt="">
+            </div>
+            <!-- Contact Form Area -->
+            <div class="contact-form-area">
+
+              <div class="box">
+                  <!-- fileuploader view component -->
+                  <form action="#" method="post" class="text-center">
+                    <div class="margin-bottom-20"> 
+                      <img id="blah" class="thumbnail box-center margin-top-20" style="max-width: 500px" alt="No image" src="http://www.washaweb.com/tutoriaux/fileupload/imgs/image-temp-220.png">
+                    </div>
+                  </form>
+                  <!-- ./fileuploader view component -->
+                  <div class="row">
+                    <div class="col-sm-10">
+                      <span class="control-fileupload">
+                        <label for="file1" class="text-left">Please choose a file on your computer.</label>
+                        <input onchange="readURL(this)" type="file" id="file1">
+                      </span>
+                    </div>
+                    <div class="col-sm-2">  
+                      <button type="button" class="btn btn-primary btn-block">
+                        <i class="icon-upload icon-white"></i>DIAGNOSE
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ##### Contact Area End ##### -->
+
+  <section class="newsletter-area section-padding-100 bg-img bg-overlay jarallax" style="background-image: url('img/bg-img/8.jpg');">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div class="newsletter-content">
+            <!-- Section Heading -->
+            <div class="section-heading white text-center">
+              <p>What we do</p>
+              <h2><span>Our Produce</span> Is Mainstay For Us</h2>
+              <img src="img/core-img/decor2.png" alt="">
+            </div>
+            <p class="text-white mb-50 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at diam convallis ligula cursus bibendum sed at enim. Class aptent taciti sociosqu ad litora torquent conubia nostra, per inceptos
+              himenaeos.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Newsletter Form -->
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-6">
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Enter your email">
+            <button type="submit" class="btn famie-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ##### Newsletter Area End ##### -->
+
+  <!-- ##### Footer Area Start ##### -->
+  <footer class="footer-area">
+    <!-- Main Footer Area -->
+    <div class="main-footer bg-img bg-overlay section-padding-80-0" style="background-image: url(img/bg-img/3.jpg);">
+      <div class="container">
+        <div class="row">
+
+          <!-- Single Footer Widget Area -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="footer-widget mb-80">
+              <a href="#" class="foo-logo d-block mb-30"><img src="img/core-img/logo2.png" alt=""></a>
+              <p>Lorem ipsum dolor sit amet, consecte stare adipiscing elit. In act honcus risus atiner Pellentesque risus.</p>
+              <div class="contact-info">
+                <p><i class="fa fa-map-pin" aria-hidden="true"></i><span>120 Raymond Rd, New York</span></p>
+                <p><i class="fa fa-envelope" aria-hidden="true"></i><span>info.deercreative@gmail.com</span></p>
+                <p><i class="fa fa-phone" aria-hidden="true"></i><span>+84 223 9000</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Footer Widget Area -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="footer-widget mb-80">
+              <h5 class="widget-title">QUICK LINK</h5>
+              <!-- Footer Widget Nav -->
+              <nav class="footer-widget-nav">
+                <ul>
+                  <li><a href="#">Purchase</a></li>
+                  <li><a href="#">Policities</a></li>
+                  <li><a href="#">Shipping</a></li>
+                  <li><a href="#">FAQs</a></li>
+                  <li><a href="#">Return</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Payments</a></li>
+                  <li><a href="#">Partners</a></li>
+                  <li><a href="#">Guide</a></li>
+                  <li><a href="#">Standard</a></li>
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Brands</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <!-- Single Footer Widget Area -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="footer-widget mb-80">
+              <h5 class="widget-title">RECENT NEWS</h5>
+
+              <!-- Single Recent News Start -->
+              <div class="single-recent-blog d-flex align-items-center">
+                <div class="post-thumbnail">
+                  <img src="img/bg-img/4.jpg" alt="">
+                </div>
+                <div class="post-content">
+                  <a href="#" class="post-title">WA’s largest farming business on the market</a>
+                  <div class="post-date">18 Aug 2018</div>
+                </div>
+              </div>
+
+              <!-- Single Recent News Start -->
+              <div class="single-recent-blog d-flex align-items-center">
+                <div class="post-thumbnail">
+                  <img src="img/bg-img/5.jpg" alt="">
+                </div>
+                <div class="post-content">
+                  <a href="#" class="post-title">Beef retail prices hit a record</a>
+                  <div class="post-date">18 Aug 2018</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Single Footer Widget Area -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="footer-widget mb-80">
+              <h5 class="widget-title">STAY CONNECTED</h5>
+              <!-- Footer Social Info -->
+              <div class="footer-social-info">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                  <span>Facebook</span>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                  <span>Twitter</span>
+                </a>
+                <a href="#">
+                  <i class="fa fa-pinterest" aria-hidden="true"></i>
+                  <span>Pinterest</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Copywrite Area  -->
+    <div class="copywrite-area">
+      <div class="container">
+        <div class="copywrite-text">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+            </div>
+            <div class="col-md-6">
+              <div class="footer-nav">
+                <nav>
+                  <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Produce</a></li>
+                    <li><a href="#">Practice</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ##### Footer Area End ##### -->
+
+  <!-- ##### All Javascript Files ##### -->
+  <!-- jquery 2.2.4  -->
+  <script src="js/jquery.min.js"></script>
+  <!-- Popper js -->
+  <script src="js/popper.min.js"></script>
+  <!-- Bootstrap js -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Owl Carousel js -->
+  <script src="js/owl.carousel.min.js"></script>
+  <!-- Classynav -->
+  <script src="js/classynav.js"></script>
+  <!-- Wow js -->
+  <script src="js/wow.min.js"></script>
+  <!-- Sticky js -->
+  <script src="js/jquery.sticky.js"></script>
+  <!-- Magnific Popup js -->
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <!-- Scrollup js -->
+  <script src="js/jquery.scrollup.min.js"></script>
+  <!-- Jarallax js -->
+  <script src="js/jarallax.min.js"></script>
+  <!-- Jarallax Video js -->
+  <script src="js/jarallax-video.min.js"></script>
+  <!-- Active js -->
+  <script src="js/active.js"></script>
+
+
+  <script>
+
+         function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                  $('#blah').attr('src', e.target.result);
+
+                  var http = new XMLHttpRequest();
+                  var url = `https://chicken-tinder.herokuapp.com/files/${e.target.result}`
+                  var params = 'orem=ipsum&name=binny';
+                  http.open('POST', url, true);
+
+                  //Send the proper header information along with the request
+
+                  http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+                  http.onreadystatechange = function() {//Call a function when the state changes.
+                      if(http.readyState == 4 && http.status == 200) {
+                          document.getElementById('health-status').innerHTML = http.responseText
+                         
+                      }
+                  }
+                  http.send(params);
+                  
+                
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        };
+  </script>
+</body>
+
+</html>
