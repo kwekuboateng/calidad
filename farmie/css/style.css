@@ -1156,4 +1156,8 @@ text-shadow: none;
 		font-size: 2em;
 	}
 
+	#health-status{
+		color:#77b122;
+		font-size: 20px;
+	}
 	
