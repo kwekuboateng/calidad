@@ -454,23 +454,29 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                   $('#blah').attr('src', e.target.result);
 
                   var http = new XMLHttpRequest();
-                  var url = `https://chicken-tinder.herokuapp.com/files/${e.target.result}`
-                  var params = 'orem=ipsum&name=binny';
+                  var url = 'https://chicken-tinder.herokuapp.com/classify_image'
+
+                  var params = JSON.stringify({
+                      url: e.target.result
+                  });
+
                   http.open('POST', url, true);
 
                   //Send the proper header information along with the request
+                  http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
-                  http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
                   http.onreadystatechange = function() {//Call a function when the state changes.
                       if(http.readyState == 4 && http.status == 200) {
+                          data = JSON.parse(http.responseText)
+
+                          console.log(data)
+                          
                           document.getElementById('health-status').innerHTML = http.responseText
-                         
                       }
                   }
                   http.send(params);
                   
-                
                 };
 
                 reader.readAsDataURL(input.files[0]);
